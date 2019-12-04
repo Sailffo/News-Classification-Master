@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>上传文章</title>
+      <script>
+        function alert_display() {
+            alert("提交成功");
+        }
+    </script>
+    <link rel="stylesheet" href="{% static 'css/semantic.css' %}" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <form action="#" enctype="multipart/form-data" method="POST">
+{% csrf_token %}
+    标题:<br>
+    <input type="text" name = "article_name">
+    <br>
+        导语:<br>
+    <input type="text" name = "daoyu">
+    <br>
+        摘要:<br>
+    <input type="text" name = "zhaiyao">
+    <br>
+
+        文章配图:<br>
+        <input type="file" name = "image">
+        <br>
+        类别:<br>
+        <select name = "choice">
+            <option value ="未知">未知</option>
+            <option value ="时政">时政</option>
+            <option value ="军事">军事</option>
+            <option value="娱乐">娱乐</option>
+            <option value="社会">社会</option>
+            <option value="游戏">游戏</option>
+            <option value="教育">教育</option>
+            <option value="科技">科技</option>
+            <option value="财经">财经</option>
+            <option value="体育">体育</option>
+        </select>
+        <br>
+        正文:<br>
+        <input type="text" name = "article_body" style="height: 500px;width: 500px">
+        <br>
+        原文链接:<br>
+        <input type="text" name = "saurce">
+        <br>
+        作者名:<br>
+        <input type="text" name = "author_name">
+        <br>
+        作者签名:<br>
+        <input type="text" name = "qianming">
+        <br>
+        作者头像:<br>
+        <input type="file" name = "author_avatar">
+        <br>
+    <button type="Submit" onclick="alert_display()">提交</button>
+</form>
+  </body>
+</html>

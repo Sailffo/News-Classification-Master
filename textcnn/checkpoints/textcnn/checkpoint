@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\AI\\MachineLearing\\text-cnn-master\\checkpoints\\textcnn\\best_validation"
+all_model_checkpoint_paths: "D:\\AI\\MachineLearing\\text-cnn-master\\checkpoints\\textcnn\\best_validation"
