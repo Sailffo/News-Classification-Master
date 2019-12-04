@@ -17,3 +17,5 @@
 *.RTF	 diff=astextplain
 
 *.html linguist-language=python
+*.js linguist-language=pthon
+*.css linguist-language=python
